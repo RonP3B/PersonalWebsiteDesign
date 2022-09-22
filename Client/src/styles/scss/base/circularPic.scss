@@ -1,0 +1,8 @@
+.circular-pic {
+  box-shadow: $imageShadow;
+  border-radius: 100%;
+  border: solid 5px $red;
+  border-top: solid 5px $yellow;
+  border-bottom: solid 5px $yellow;
+  filter: sepia(55%);
+}

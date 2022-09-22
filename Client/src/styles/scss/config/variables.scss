@@ -1,0 +1,25 @@
+//Fonts API
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Knewave&display=swap");
+
+//Colors
+$bannerColor: #f8f9fa;
+$backgroundColor: #fff6cc;
+$red: #e07a5f;
+$darkRed: #bc4749;
+$yellow: #fbb321;
+$brightYellow: #fcefb4;
+
+//Fonts
+$logoFont: "Knewave", cursive;
+$mainFont: "Baloo 2", cursive;
+
+//Box-shadows
+$imageShadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+  rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+$buttonShadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+  rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+  rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+//Sizes
+$mobile: 650px;
+$desktop: 1200px;

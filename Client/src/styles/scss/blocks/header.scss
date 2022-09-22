@@ -1,0 +1,147 @@
+.header {
+  &__nav {
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bannerColor;
+    box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.61);
+
+    &__menu-icon,
+    &__check {
+      display: none;
+    }
+
+    &__logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 2.7rem;
+        height: 2.7rem;
+      }
+
+      label {
+        font-family: $logoFont;
+        font-size: 1.2rem;
+        color: $yellow;
+        cursor: pointer;
+
+        &::first-letter {
+          font-size: 1.5rem;
+          color: $red;
+        }
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-around;
+
+      a {
+        color: $yellow;
+        margin-left: 1rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        transition: color 0.2s linear;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    &__nav {
+      padding: 0.5rem 2.5rem;
+
+      &__logo {
+        img {
+          width: 2.9rem;
+          height: 2.9rem;
+        }
+
+        label {
+          font-size: 1.3rem;
+
+          &::first-letter {
+            font-size: 1.6rem;
+          }
+        }
+      }
+
+      &__list {
+        a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    &__nav {
+      position: relative;
+
+      &__menu-icon {
+        display: block;
+        color: $yellow;
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: color 0.2s linear;
+
+        &:hover {
+          color: $red;
+        }
+      }
+
+      &__check:checked ~ &__list {
+        display: block;
+      }
+
+      &__check:checked ~ &__menu-icon {
+        color: $red;
+      }
+
+      &__list {
+        display: none;
+        position: absolute;
+        background-color: $bannerColor;
+        top: 100%;
+        right: 0;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-bottom: 2px solid $yellow;
+        border-left: 2px solid $yellow;
+        width: 50%;
+        min-width: 13rem;
+        z-index: 2;
+
+        a {
+          display: flex;
+          align-items: center;
+          margin: 0;
+          border-top: 1px solid $yellow;
+          padding: 0.3rem;
+          background-color: $bannerColor;
+          height: 2.2rem;
+          transition-property: background-color, color;
+          transition-duration: 0.2s;
+          transition-timing-function: linear;
+
+          &:hover {
+            background-color: $brightYellow;
+          }
+        }
+      }
+
+      &__check {
+        display: block;
+        position: absolute;
+        right: 1.75rem;
+        transform: scale(1.5);
+        opacity: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}

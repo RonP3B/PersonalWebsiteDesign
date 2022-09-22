@@ -1,0 +1,95 @@
+.home {
+  min-height: calc(100vh - 134.1px);
+  padding: 0.5rem 0.2rem;
+
+  &__background {
+    img {
+      height: 17em;
+      width: 100%;
+    }
+  }
+
+  &__info {
+    text-align: center;
+
+    &__picture {
+      position: relative;
+      height: 0;
+
+      img {
+        height: 12rem;
+        position: relative;
+        top: -8rem;
+        right: 35%;
+      }
+    }
+
+    &__title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: $red;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+    }
+
+    &__about {
+      color: $red;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin: 1rem auto;
+      max-width: 35rem;
+    }
+  }
+
+  @include desktop {
+    min-height: calc(100vh - 142px);
+
+    &__info {
+      &__picture {
+        img {
+          height: 13rem;
+          width: 13rem;
+        }
+      }
+
+      &__title {
+        font-size: 3.2rem;
+      }
+
+      &__about {
+        font-size: 1.6rem;
+        max-width: 45rem;
+      }
+    }
+  }
+
+  @include mobile {
+    min-height: calc(100vh - 129.1px);
+
+    &__background {
+      img {
+        height: 14em;
+      }
+    }
+
+    &__info {
+      &__picture {
+        img {
+          height: 9.5rem;
+          width: 9.5rem;
+          top: -6rem;
+          right: 0;
+        }
+      }
+
+      &__title {
+        margin-top: 4rem;
+        font-size: 2.2rem;
+      }
+
+      &__about {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

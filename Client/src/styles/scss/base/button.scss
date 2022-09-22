@@ -1,0 +1,20 @@
+.button {
+  display: block;
+  font-weight: 600;
+  background-color: $red;
+  padding: 0.2rem 0.4rem;
+  color: $yellow;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  box-shadow: $buttonShadow;
+  text-align: center;
+  transition-property: background-color, color;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $yellow;
+    color: $red;
+  }
+}

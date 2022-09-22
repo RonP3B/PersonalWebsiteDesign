@@ -1,0 +1,63 @@
+.qualities {
+  min-height: calc(100vh - 134.1px);
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  display: grid;
+  align-items: center;
+
+  &__container {
+    img {
+      margin: 2rem 0 0 0;
+      height: 8rem;
+    }
+
+    h4 {
+      color: $red;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+      margin-bottom: 0.45rem;
+    }
+
+    li {
+      color: $yellow;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+    }
+  }
+
+  &__btn {
+    width: 50%;
+    margin: 0 auto 0.4rem auto;
+  }
+
+  @include desktop {
+    min-height: calc(100vh - 142px);
+
+    &__container {
+      max-width: 65%;
+    }
+
+    &__btn {
+      width: 40%;
+    }
+  }
+
+  @include mobile {
+    min-height: calc(100vh - 129.1px);
+    padding: 0.4rem 0.55rem;
+
+    &__container {
+      max-width: 95%;
+
+      img {
+        height: 7rem;
+      }
+    }
+
+    &__btn {
+      width: 60%;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "./config/variables.scss";
+
+@import "./mixins/breakpoints.scss";
+
+@import "./base/body.scss";
+@import "./base/QuickNormalize.scss";
+@import "./base/button.scss";
+@import "./base/modal.scss";
+@import "./base/circularPic.scss";
+
+@import "./blocks/header.scss";
+@import "./blocks/home.scss";
+@import "./blocks/qualities.scss";
+@import "./blocks/skills.scss";
+@import "./blocks/projects.scss";
+@import "./blocks/contact.scss";
+@import "./blocks/footer.scss";

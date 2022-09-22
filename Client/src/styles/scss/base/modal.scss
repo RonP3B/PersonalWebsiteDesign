@@ -1,0 +1,22 @@
+.modal {
+  background-color: $bannerColor;
+  padding: 0.75rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-width: 70%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $brightYellow;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    height: 30%;
+    width: 100%;
+    border-bottom: 2px solid #e07a5f5e;
+  }
+}

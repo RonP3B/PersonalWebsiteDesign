@@ -1,0 +1,156 @@
+.projects {
+  padding: 0.5rem 0.75rem;
+  min-height: calc(100vh - 134.1px);
+  display: grid;
+  align-items: center;
+
+  &__title {
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $red;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    &__project {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 28rem;
+      background-color: $bannerColor;
+      border: 2px solid $red;
+      border-radius: 0.75rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      transition: transform 0.25s linear;
+      height: 20rem;
+      color: $red;
+
+      figure {
+        height: 50%;
+        border-bottom: 2px solid $yellow;
+
+        img {
+          width: 100%;
+          max-height: 100%;
+          border-top-left-radius: 0.75rem;
+          border-top-right-radius: 0.75rem;
+          border: solid 5px $red;
+          border-top: solid 5px $yellow;
+          border-bottom: solid 5px $yellow;
+          filter: sepia(55%);
+        }
+      }
+
+      div {
+        padding: 0.3rem 0.5rem;
+        overflow: auto;
+        height: 10rem;
+
+        &::-webkit-scrollbar {
+          width: 0.25rem;
+          background: $yellow;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $red;
+        }
+
+        h4 {
+          text-align: center;
+          letter-spacing: 0.1rem;
+          font-size: 1.3rem;
+          font-weight: 700;
+        }
+
+        p {
+          font-weight: 600;
+          line-height: 1;
+          margin: 0.75rem 0;
+        }
+
+        a {
+          padding: 0.1rem 0.35rem;
+          background-color: $red;
+          color: $yellow;
+          font-weight: 700;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          border-radius: 0.3rem;
+          transition-property: background-color, color;
+          transition-duration: 0.25s;
+          transition-timing-function: linear;
+
+          &:hover {
+            background-color: $yellow;
+            color: $red;
+          }
+        }
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  &__btn {
+    margin: 2rem auto 1rem auto;
+    width: 50%;
+  }
+
+  @include desktop {
+    &__title {
+      font-size: 2.3rem;
+    }
+
+    &__container {
+      grid-template-columns: repeat(3, 1fr);
+
+      &__project {
+        width: 85%;
+        max-width: 35rem;
+
+        div {
+          padding: 0.3rem 0.5rem;
+
+          h4 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+
+          a {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    &__btn {
+      width: 40%;
+      max-width: 50rem;
+    }
+  }
+
+  @include mobile {
+    &__container {
+      grid-template-columns: 1fr;
+
+      &__project {
+        width: 85%;
+      }
+    }
+  }
+
+  &__btn {
+    width: 60%;
+  }
+}

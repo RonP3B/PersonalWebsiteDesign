@@ -1,0 +1,121 @@
+.contact {
+  min-height: calc(100vh - 134.1px);
+  padding: 0.5rem 0.75rem;
+  display: grid;
+  align-items: center;
+
+  &__container {
+    img {
+      display: block;
+      margin: 2rem auto 0 auto;
+      height: 8rem;
+    }
+
+    h4 {
+      color: $red;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+      margin-bottom: 0.45rem;
+    }
+
+    &__user-info {
+      display: grid;
+      column-gap: 0.55rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    form {
+      input,
+      textarea,
+      button {
+        border-radius: 0.2rem;
+        background-color: $brightYellow;
+        border: solid 1px $yellow;
+        color: $red;
+        outline: none;
+        font-weight: 700;
+
+        &::placeholder {
+          color: $red;
+          opacity: 0.5;
+        }
+      }
+
+      input,
+      textarea {
+        padding: 0.25rem 0.35rem;
+      }
+
+      input {
+        min-width: 2rem;
+      }
+
+      textarea {
+        display: block;
+        width: 100%;
+        margin-top: 0.55rem;
+        resize: none;
+        height: 7rem;
+        font-size: 0.85rem;
+      }
+
+      button {
+        margin: 0.55rem auto;
+        width: 100%;
+        box-shadow: none;
+
+        &:hover {
+          border: 1px solid $red;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    margin: 1rem auto;
+    width: 50%;
+  }
+
+  @include desktop {
+    min-height: calc(100vh - 142px);
+
+    &__container {
+      width: 65%;
+      max-width: 57rem;
+    }
+
+    &__btn {
+      width: 40%;
+      max-width: 40rem;
+    }
+  }
+
+  @include mobile {
+    min-height: calc(100vh - 129.1px);
+    padding: 0.4rem 0.55rem;
+
+    &__container {
+      max-width: 95%;
+
+      img {
+        height: 7rem;
+      }
+
+      &__user-info {
+        display: block;
+
+        input {
+          display: block;
+          width: 100%;
+          margin-top: 0.55rem;
+        }
+      }
+    }
+
+    &__btn {
+      width: 60%;
+    }
+  }
+}

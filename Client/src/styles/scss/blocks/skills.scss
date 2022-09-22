@@ -1,0 +1,107 @@
+.skills {
+  padding: 0.5rem 0.75rem;
+  min-height: calc(100vh - 134.1px);
+  display: grid;
+  align-items: center;
+
+  &__title {
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $red;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    min-width: 70%;
+    max-width: 57rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    &__stars {
+      border-left: 1px solid $yellow;
+      font-size: 1.1rem;
+      color: $darkRed;
+    }
+
+    thead th {
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      background-color: $yellow;
+      color: $darkRed;
+      font-weight: 700;
+      width: 50%;
+
+      &:first-child {
+        border-top-left-radius: 0.35rem;
+      }
+
+      &:last-child {
+        border-top-right-radius: 0.35rem;
+      }
+    }
+
+    tbody tr {
+      text-transform: capitalize;
+      border-bottom: 1px solid $yellow;
+      color: $red;
+      font-weight: 500;
+      width: 50%;
+
+      &:nth-last-of-type(even) {
+        background-color: $brightYellow;
+      }
+
+      &:last-child {
+        border-bottom: 3px solid $yellow;
+      }
+    }
+
+    td,
+    th {
+      padding: 0.2rem 0.5rem;
+    }
+  }
+
+  &__btn {
+    margin: 1rem auto;
+    width: 50%;
+  }
+
+  @include desktop {
+    min-height: calc(100vh - 142px);
+
+    &__title {
+      font-size: 2.2rem;
+    }
+
+    &__table {
+      min-width: 65%;
+    }
+
+    &__btn {
+      width: 40%;
+    }
+  }
+
+  @include mobile {
+    min-height: calc(100vh - 129.1px);
+    padding: 0.4rem 0.55rem;
+
+    &__title {
+      font-size: 1.75rem;
+    }
+
+    &__table {
+      min-width: 95%;
+    }
+
+    &__btn {
+      width: 60%;
+    }
+  }
+}
